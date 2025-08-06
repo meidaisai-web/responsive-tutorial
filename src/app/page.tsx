@@ -323,6 +323,87 @@ export default function Home() {
         </div>
       </section>
 
+      {/* セクション9: max-w と min-w の説明 */}
+      <section className="mb-12 border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 p-6 rounded-lg">
+        <h2 className="text-2xl font-bold mb-4">9. max-w と min-w 〜幅の制限をかける魔法〜</h2>
+        <p className="mb-4 text-gray-700 dark:text-gray-300">
+          max-wとmin-wは要素の最大幅と最小幅を制限するクラスだよ〜！
+          レスポンシブデザインで読みやすさを保つために超重要なの♪
+        </p>
+        
+        {/* max-w の例 */}
+        <div className="mb-6">
+          <h3 className="font-bold mb-2">max-w（最大幅を制限）</h3>
+          <div className="border-2 border-violet-300 dark:border-violet-600 p-4 mb-4">
+            <div className="max-w-md w-full bg-violet-200 dark:bg-violet-700 p-4 rounded mx-auto">
+              わたしは max-w-md で最大幅が制限されてるよ〜！
+              画面がどんなに大きくても、これ以上は大きくならないの💜
+              長い文章でも読みやすい幅をキープできるよ♪
+            </div>
+          </div>
+          <div className="bg-gray-100 dark:bg-gray-700 p-4 rounded">
+            <code className="text-sm text-gray-800 dark:text-gray-200">
+              {'<div className="w-full max-w-md"> // 最大幅28rem'}
+            </code>
+          </div>
+        </div>
+
+        {/* min-w の例 */}
+        <div className="mb-6">
+          <h3 className="font-bold mb-2">min-w（最小幅を保証）</h3>
+          <div className="border-2 border-rose-300 dark:border-rose-600 p-4 mb-4">
+            <div className="min-w-80 w-full bg-rose-200 dark:bg-rose-700 p-4 text-center rounded">
+              min-w-80で最小幅キープ✨
+            </div>
+          </div>
+          <div className="bg-gray-100 dark:bg-gray-700 p-4 rounded">
+            <code className="text-sm text-gray-800 dark:text-gray-200">
+              {'<div className="min-w-80 w-full"> // w-fullより min-w-80が優先'}
+            </code>
+          </div>
+        </div>
+
+        {/* 組み合わせの例 */}
+        <div className="mb-4">
+          <h3 className="font-bold mb-2">max-w と min-w の組み合わせ</h3>
+          <div className="border-2 border-sky-300 dark:border-sky-600 p-4 mb-4">
+            <div className="min-w-96 max-w-lg w-full bg-sky-200 dark:bg-sky-700 p-4 text-center rounded">
+              最小96、最大lg、基本は100%の幅だよ〜🌈
+            </div>
+          </div>
+          <div className="bg-gray-100 dark:bg-gray-700 p-4 rounded">
+            <code className="text-sm text-gray-800 dark:text-gray-200">
+              {'<div className="min-w-96 max-w-lg w-full">'}
+            </code>
+          </div>
+        </div>
+
+        <div className="mt-4 p-4 bg-purple-50 dark:bg-purple-900/30 rounded">
+          <h3 className="font-bold mb-2">max-w と min-w の特徴♪</h3>
+          <ul className="text-sm space-y-1">
+            <li>📏 max-w: 要素が大きくなりすぎるのを防ぐ</li>
+            <li>🛡️ min-w: 要素が小さくなりすぎるのを防ぐ</li>
+            <li>📖 max-w-prose: 文章の読みやすい幅（約65文字）</li>
+            <li>💻 max-w-screen-xl: 画面サイズに応じた制限</li>
+            <li>✨ 組み合わせることで柔軟なレイアウトが可能</li>
+          </ul>
+        </div>
+
+        <div className="mt-4 p-4 bg-amber-50 dark:bg-amber-900/30 rounded">
+          <h3 className="font-bold mb-2">よく使うmax-wのサイズ♪</h3>
+          <div className="grid grid-cols-2 gap-2 text-sm">
+            <div>max-w-xs (20rem)</div>
+            <div>max-w-sm (24rem)</div>
+            <div>max-w-md (28rem)</div>
+            <div>max-w-lg (32rem)</div>
+            <div>max-w-xl (36rem)</div>
+            <div>max-w-2xl (42rem)</div>
+            <div>max-w-4xl (56rem)</div>
+            <div>max-w-screen-lg</div>
+          </div>
+        </div>
+      </section>
+
       {/* まとめセクション */}
       <section className="border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 p-6 rounded-lg bg-gradient-to-r from-pink-50 to-purple-50 dark:from-pink-900/20 dark:to-purple-900/20">
         <h2 className="text-2xl font-bold mb-4">まとめ 💕</h2>
@@ -335,6 +416,7 @@ export default function Home() {
           <p>✨ sm:md:lg: 画面サイズ別のスタイル</p>
           <p>✨ useMediaQuery: JavaScript での画面サイズ検知</p>
           <p>✨ flex-wrap: 要素を自動で折り返し</p>
+          <p>✨ max-w/min-w: 幅の最大・最小値を制限</p>
         </div>
         <p className="mt-4 text-center font-bold text-purple-600 dark:text-purple-300">
           お疲れ様でした〜！レスポンシブマスターの仲間入りだね♪
