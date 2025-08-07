@@ -153,7 +153,7 @@ export default function Home() {
             </div>
           </div>
           
-          <div className="border-2 border-teal-300 dark:border-teal-600 p-4">
+          <div className="border-2 border-teal-300 dark:border-teal-600 p-4 text-lg">
             <div className="w-[20rem] bg-teal-200 dark:bg-teal-700 p-4 text-center rounded">
               w-[20rem] - ルート要素のフォントサイズ基準だよ〜🌍
             </div>
@@ -232,6 +232,19 @@ export default function Home() {
             )}
           </div>
         </div>
+
+        <div className="border-2 border-red-300 dark:border-red-600 p-4 mb-4">
+          <div className="bg-red-200 dark:bg-red-700 p-4 text-center rounded">
+              <div className='hidden md:block'>
+                🖥️ 大きい画面だね〜！<br />
+                css で 768px以上を検知してるよ♪
+              </div>
+              <div className='md:hidden bg-blue-500'>
+                📱 小さい画面だね〜！<br />
+                css で 768px未満を検知してるよ♪
+              </div>
+          </div>
+        </div>
         
         <div className="bg-gray-100 dark:bg-gray-700 p-4 rounded">
           <code className="text-sm block mb-2 text-gray-800 dark:text-gray-200">
@@ -302,6 +315,9 @@ export default function Home() {
               </div>
               <div className="w-32 bg-emerald-200 dark:bg-emerald-700 p-2 text-center rounded text-sm">
                 アイテム5
+              </div>
+              <div className="w-32 bg-emerald-200 dark:bg-emerald-700 p-2 text-center rounded text-sm">
+                アイテム6
               </div>
             </div>
           </div>
